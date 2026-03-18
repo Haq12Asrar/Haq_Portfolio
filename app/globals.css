@@ -3,11 +3,16 @@
   --blue: #0066ff;
   --purple: #8800ff;
   --green: #00ff88;
-  --dark: #020408;
-  --card: rgba(0, 20, 40, 0.7);
-  --border: rgba(0, 245, 255, 0.2);
-  --text: #c8e8ff;
-  --dim: rgba(200, 232, 255, 0.5);
+  --dark: #010206;
+  /* Deeper black for even more contrast */
+  --card: rgba(0, 15, 30, 0.9);
+  /* More solid cards to pop against background */
+  --border: rgba(0, 245, 255, 0.35);
+  /* Stronger outlines */
+  --text: #ffffff;
+  /* pure white text for maximum readability */
+  --dim: rgba(227, 242, 255, 0.82);
+  /* Much brighter secondary text */
 }
 
 * {
@@ -93,9 +98,12 @@ nav {
 
 .nav-links a {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 13px;
+  font-size: 14px;
+  /* Increased */
   color: var(--dim);
   text-decoration: none;
+  font-weight: 500;
+  /* Bolder */
   letter-spacing: 2px;
   transition: color .3s;
   position: relative;
@@ -173,7 +181,8 @@ section {
   left: 20px;
   right: -20px;
   bottom: -20px;
-  border: 2px solid rgba(0, 245, 255, 0.2);
+  border: 2px solid rgba(0, 245, 255, 0.35);
+  /* Stronger */
   z-index: 0;
   animation: scan 4s linear infinite alternate;
 }
@@ -228,8 +237,10 @@ section {
   right: 0;
   color: var(--cyan);
   font-family: 'Share Tech Mono', monospace;
-  font-size: 10px;
-  text-shadow: 0 0 5px var(--cyan);
+  font-size: 11px;
+  /* Increased */
+  text-shadow: 0 0 8px var(--cyan);
+  /* More glow for visibility */
   letter-spacing: 1px;
 }
 
@@ -335,11 +346,15 @@ section {
 
 .rb {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 12px;
+  font-size: 13px;
+  /* Stronger */
   letter-spacing: 2px;
-  padding: 8px 20px;
-  border: 1px solid var(--cyan);
-  color: var(--cyan);
+  padding: 10px 24px;
+  border: 1.5px solid var(--cyan);
+  /* Thicker */
+  color: #fff;
+  /* High contrast text */
+  box-shadow: 0 0 10px rgba(0, 245, 255, 0.2);
   position: relative;
   overflow: hidden;
   transition: color .3s;
@@ -368,9 +383,11 @@ section {
 .hero-desc {
   max-width: 500px;
   margin: 0 0 40px 0;
-  font-size: 17px;
-  font-weight: 300;
-  line-height: 1.8;
+  font-size: 18px;
+  /* Bigger */
+  font-weight: 400;
+  /* Regular weight instead of thin */
+  line-height: 1.7;
   color: var(--dim);
   text-align: left;
 }

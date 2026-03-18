@@ -424,9 +424,9 @@ export default function Home() {
               <p className="cd">{data.contact.description}</p>
               <div className="cl">
                 {/* TOP EMAIL CONTACT */}
-                <a href="mailto:haqasrar264@gmail.com" className="ci" style={{ border: '1px solid #00f5ff', background: 'rgba(0,245,255,0.05)' }}>
-                  <span style={{ fontSize: '20px' }}>📧</span>
-                  <span style={{ fontFamily: 'Orbitron', fontSize: '11px', letterSpacing: '1px', color: '#00f5ff' }}>haqasrar264@gmail.com</span>
+                <a href="mailto:haqasrar264@gmail.com" className="ci" style={{ border: '2px solid #00f5ff', background: 'rgba(0,245,255,0.1)' }}>
+                  <span style={{ fontSize: '22px' }}>📧</span>
+                  <span style={{ fontFamily: 'Orbitron', fontSize: '13px', letterSpacing: '1px', color: '#fff', fontWeight: '700' }}>haqasrar264@gmail.com</span>
                 </a>
 
                 {data.contact.links.filter(l => l.label !== 'EMAIL').map(l => (
@@ -437,9 +437,9 @@ export default function Home() {
                 ))}
 
                 {/* BOTTOM EMAIL CONTACT */}
-                <a href="mailto:haqasrar264@gmail.com" className="ci" style={{ opacity: 0.7, fontSize: '10px' }}>
-                  <span style={{ fontSize: '15px' }}>✉</span>
-                  <span style={{ fontFamily: 'Share Tech Mono', letterSpacing: '1px' }}>QUICK_MAIL: haqasrar264@gmail.com</span>
+                <a href="mailto:haqasrar264@gmail.com" className="ci" style={{ opacity: 0.9, fontSize: '12px' }}>
+                  <span style={{ fontSize: '18px' }}>✉</span>
+                  <span style={{ fontFamily: 'Share Tech Mono', letterSpacing: '1px', color: '#00f5ff' }}>QUICK_MAIL: haqasrar264@gmail.com</span>
                 </a>
               </div>
               <div className="lr">
