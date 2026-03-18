@@ -1,0 +1,270 @@
+{
+  "hero": {
+    "tag": "// PORTFOLIO 2026",
+    "name": "MOHAMMAD ASRAR",
+    "subtitle": "UL HAQUE AHANGER",
+    "roles": [
+      "WEB DEVELOPER",
+      "APP DEVELOPER",
+      "DATA ANALYST"
+    ],
+    "description": "Building data-driven solutions and crafting efficient, user-friendly web applications. Passionate about technology that creates real-world impact.",
+    "image": "/uploads/1773829683654_Asrar.png"
+  },
+  "about": {
+    "title": "ABOUT ME",
+    "text": [
+      "I'm an aspiring Data Analyst, Python Developer, and Web/App Developer currently pursuing my Bachelor of Engineering in Computer Science at M. Kumarasamy College of Engineering.",
+      "Currently in my 4th semester, actively building projects in web/app development and data analysis while participating in hackathons and technical team activities.",
+      "Passionate about creating solutions that bridge technology and community needs — most notably with KashCare, my ongoing healthcare startup."
+    ],
+    "stats": [
+      {
+        "label": "YEARS EXP",
+        "value": 2
+      },
+      {
+        "label": "PROJECTS",
+        "value": 6
+      },
+      {
+        "label": "LANGUAGES",
+        "value": 4
+      }
+    ],
+    "education": {
+      "degree": "B.E. Computer Science",
+      "institution": "M. Kumarasamy College of Engineering",
+      "details": "Currently in 4th Semester · Focused on programming, data analysis, and app/web development"
+    },
+    "location": "Bandipora, J&K, India 193501 · Available for remote opportunities",
+    "certification": "BIT Participate Certification - Recognized participation in technical events and competitions"
+  },
+  "skills": [
+    {
+      "name": "PYTHON",
+      "percent": 70,
+      "icon": "🐍"
+    },
+    {
+      "name": "HTML / CSS",
+      "percent": 88,
+      "icon": "🌐"
+    },
+    {
+      "name": "FLUTTER",
+      "percent": 66,
+      "icon": "📱"
+    },
+    {
+      "name": "DATA ANALYSIS",
+      "percent": 50,
+      "icon": "📊"
+    },
+    {
+      "name": "NUMPY / PANDAS",
+      "percent": 75,
+      "icon": "🔢"
+    },
+    {
+      "name": "UI/UX DESIGN",
+      "percent": 70,
+      "icon": "🎨"
+    }
+  ],
+  "experience": [
+    {
+      "date": "JAN 2025 — PRESENT",
+      "title": "Hackathon & Project Developer",
+      "company": "Team Ocras",
+      "bullets": [
+        "Collaborated with a team to develop AI-based and mobile applications",
+        "Contributed to front-end development using HTML, CSS, and Flutter",
+        "Assisted in implementing quiz logic, score systems, badges, and leaderboard features",
+        "Participated in problem-solving, debugging, and feature enhancement",
+        "Applied communication and analytical skills in a team environment"
+      ]
+    },
+    {
+      "date": "MAR 2026 — PRESENT",
+      "title": "Founder & Lead Developer",
+      "company": "KashCare · Appex Production",
+      "bullets": [
+        "Conceptualizing and spearheading a healthcare-at-home service app",
+        "Architecting a cross-platform mobile app using Flutter + Node.js/MongoDB",
+        "Implementing secure authentication and dynamic booking algorithm",
+        "Designing user-centric UI/UX focused on accessibility for elderly patients"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "type": "CLIENT PROJECT",
+      "title": "Local News Channel Website",
+      "description": "Responsive website for a local news platform with structured content layout, navigation system, and media sections.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "RESPONSIVE"
+      ],
+      "github": "https://github.com/haqasrar/local-news-website"
+    },
+    {
+      "type": "CLIENT PROJECT",
+      "title": "Production House Website",
+      "description": "Professional portfolio-style website showcasing services, projects, and media content with modern UI design.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "UI DESIGN"
+      ],
+      "github": "https://github.com/haqasrar/production-house-website"
+    },
+    {
+      "type": "PERSONAL PROJECT",
+      "title": "Cricket Scorer App",
+      "description": "Web/mobile application to track live cricket scores with scoring logic, match tracking, and dynamic real-time updates.",
+      "tags": [
+        "FLUTTER",
+        "JAVASCRIPT",
+        "REAL-TIME"
+      ],
+      "github": "https://github.com/haqasrar/cricket-scorer-app"
+    },
+    {
+      "type": "PERSONAL PROJECT",
+      "title": "Hand Gesture Recognition",
+      "description": "Python-based project for detecting hand gestures using basic computer vision concepts for real-time gesture identification.",
+      "tags": [
+        "PYTHON",
+        "CV2",
+        "COMPUTER VISION"
+      ],
+      "github": "https://github.com/haqasrar/hand-gesture-recognition"
+    },
+    {
+      "type": "PERSONAL PROJECT",
+      "title": "Password Generator",
+      "description": "Secure password generator using Python with customizable password length and character set options.",
+      "tags": [
+        "PYTHON",
+        "SECURITY",
+        "CLI"
+      ],
+      "github": "https://github.com/haqasrar/password-generator"
+    },
+    {
+      "type": "PERSONAL PROJECT",
+      "title": "Email OTP System",
+      "description": "Email verification system using OTP authentication with backend logic for secure user validation.",
+      "tags": [
+        "PYTHON",
+        "SMTP",
+        "AUTH"
+      ],
+      "github": "https://github.com/haqasrar/email-otp-system"
+    }
+  ],
+  "startup": {
+    "name": "KASHCARE",
+    "badge": "ACTIVE DEVELOPMENT · MARCH 2026",
+    "role": "HEALTHCARE AT HOME ·  LEAD DEVELOPER · APPEX PRODUCTION",
+    "points": [
+      {
+        "label": "PRODUCT VISION",
+        "text": "Doorstep medical aid — injections, dressings, and more — for the local community of Kashmir."
+      },
+      {
+        "label": "TECHNICAL ARCHITECTURE",
+        "text": "Cross-platform mobile app with Flutter frontend and Node.js/MongoDB backend for real-time requests."
+      },
+      {
+        "label": "SYSTEM DESIGN",
+        "text": "Secure authentication system and dynamic booking algorithm connecting patients with nearby healthcare professionals."
+      },
+      {
+        "label": "IMPACT",
+        "text": "Accessibility-focused UI/UX for elderly patients ensuring critical medical services are reachable in under 3 clicks."
+      }
+    ],
+    "tags": [
+      "FLUTTER",
+      "NODE.JS",
+      "MONGODB",
+      "REST API",
+      "JWT AUTH",
+      "UI/UX"
+    ]
+  },
+  "contact": {
+    "description": "Open to internships, collaborations, freelance projects, and exciting opportunities. Let's build something amazing together.",
+    "links": [
+      {
+        "label": "GITHUB",
+        "url": "https://github.com/haqasrar",
+        "icon": "🐙"
+      },
+      {
+        "label": "LINKEDIN",
+        "url": "https://www.linkedin.com/in/haq-asrar",
+        "icon": "💼"
+      },
+      {
+        "label": "EMAIL",
+        "url": "mailto:asrar@example.com",
+        "icon": "📧"
+      },
+      {
+        "label": "YOUTUBE",
+        "url": "https://youtube.com/@haqasrar",
+        "icon": "▶️"
+      },
+      {
+        "label": "FACEBOOK",
+        "url": "https://facebook.com/haqasrar",
+        "icon": "📘"
+      },
+      {
+        "label": "INSTAGRAM",
+        "url": "https://instagram.com/haqasrar",
+        "icon": "📸"
+      },
+      {
+        "label": "X / TWITTER",
+        "url": "https://x.com/haqasrar",
+        "icon": "𝕏"
+      }
+    ],
+    "languages": [
+      "ENGLISH",
+      "HINDI",
+      "URDU",
+      "KASHMIRI"
+    ]
+  },
+  "teams": [
+    {
+      "title": "TEAM KOSHUR CODER",
+      "description": "A collaborative force of passionate developers and designers from Kashmir, dedicated to building high-impact digital solutions and empowering the local tech ecosystem through innovative projects and mentorship.",
+      "image": "/uploads/1773848215098_Black_Simple_Personal_Logo_(1).png",
+      "socials": {
+        "instagram": "https://www.instagram.com/koshur.coder/",
+        "linkedin": "",
+        "facebook": "https://www.facebook.com/profile.php?id=61585884416290",
+        "youtube": "https://www.youtube.com/@koshurcoderr",
+        "x": "https://x.com/Haq1Asrar"
+      }
+    },
+    {
+      "title": "APPEX PRODUCTIONS",
+      "description": "Kashmir's premier multimedia production house specializing in cinematic storytelling, high-end photography, and digital content creation that bridges culture with modern technology.",
+      "image": "/uploads/1773848406966_about.png",
+      "website": "https://appexproductions.com",
+      "socials": {
+        "instagram": "https://www.instagram.com/appex.productions/",
+        "youtube": "https://www.youtube.com/@Appex-Productions",
+        "facebook": "https://www.facebook.com/appex.productions"
+      }
+    }
+  ]
+}
