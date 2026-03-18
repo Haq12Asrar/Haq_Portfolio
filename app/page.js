@@ -103,10 +103,10 @@ export default function Home() {
         this.y = Math.random() * -canvas.height;
       }
       reset() {
-        this.x = Math.floor(Math.random() * (canvas.width / 20)) * 20;
+        this.x = Math.floor(Math.random() * (canvas.width / 25)) * 25;
         this.y = -20;
-        this.length = Math.random() * 8 + 4;
-        this.speed = Math.random() * 2 + 1;
+        this.length = Math.random() * 10 + 5;
+        this.speed = Math.random() * 3 + 2; // FASTER
         this.chars = Array.from({ length: this.length }, () =>
           Math.random() > 0.5 ? Math.floor(Math.random() * 2) : String.fromCharCode(0x30A0 + Math.random() * 96)
         );
@@ -116,17 +116,17 @@ export default function Home() {
         if (this.y > canvas.height + 100) this.reset();
       }
       draw() {
-        ctx.font = '12px Share Tech Mono';
+        ctx.font = '14px Share Tech Mono'; // Slightly larger
         this.chars.forEach((c, i) => {
-          const alpha = (1 - (i / this.length)) * 0.15;
-          ctx.fillStyle = `rgba(0, 245, 255, ${alpha})`;
-          ctx.fillText(c, this.x, this.y - (i * 15));
+          const alpha = (1 - (i / this.length)) * 0.25; // More opaque
+          ctx.fillStyle = `rgba(0, 255, 136, ${alpha})`; // Classic Matrix Green
+          ctx.fillText(c, this.x, this.y - (i * 18));
         });
       }
     }
 
     const particles = Array.from({ length: 150 }, () => new Particle());
-    const rains = Array.from({ length: 40 }, () => new DigitalRain());
+    const rains = Array.from({ length: 80 }, () => new DigitalRain());
 
     const drawGrid = () => {
       ctx.strokeStyle = 'rgba(0,100,180,.08)';
