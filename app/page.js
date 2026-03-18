@@ -187,7 +187,7 @@ export default function Home() {
       <canvas id="bgc" ref={canvasRef}></canvas>
 
       <nav>
-        <div className="logo">ASRAR</div>
+        <div className="logo">KOSHUR.CODER</div>
         <div className="nav-links">
           <a href="#about">ABOUT</a>
           <a href="#skills">SKILLS</a>
