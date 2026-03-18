@@ -97,39 +97,65 @@ export default function Home() {
       }
     }
 
-    const particles = Array.from({ length: 200 }, () => new Particle());
+    class DigitalRain {
+      constructor() {
+        this.reset();
+        this.y = Math.random() * -canvas.height;
+      }
+      reset() {
+        this.x = Math.floor(Math.random() * (canvas.width / 20)) * 20;
+        this.y = -20;
+        this.length = Math.random() * 8 + 4;
+        this.speed = Math.random() * 2 + 1;
+        this.chars = Array.from({ length: this.length }, () =>
+          Math.random() > 0.5 ? Math.floor(Math.random() * 2) : String.fromCharCode(0x30A0 + Math.random() * 96)
+        );
+      }
+      update() {
+        this.y += this.speed;
+        if (this.y > canvas.height + 100) this.reset();
+      }
+      draw() {
+        ctx.font = '12px Share Tech Mono';
+        this.chars.forEach((c, i) => {
+          const alpha = (1 - (i / this.length)) * 0.15;
+          ctx.fillStyle = `rgba(0, 245, 255, ${alpha})`;
+          ctx.fillText(c, this.x, this.y - (i * 15));
+        });
+      }
+    }
+
+    const particles = Array.from({ length: 150 }, () => new Particle());
+    const rains = Array.from({ length: 40 }, () => new DigitalRain());
 
     const drawGrid = () => {
-      ctx.strokeStyle = 'rgba(0,100,180,.12)';
-      ctx.lineWidth = 0.5;
+      ctx.strokeStyle = 'rgba(0,100,180,.08)';
+      ctx.lineWidth = 0.4;
       const vx = canvas.width / 2;
       const vy = canvas.height * 0.55;
-      for (let i = 0; i <= 12; i++) {
-        const y = canvas.height * 0.6 + i * 60;
-        const p = i / 12;
+      for (let i = 0; i <= 10; i++) {
+        const y = canvas.height * 0.6 + i * 80;
+        const p = i / 10;
         ctx.beginPath();
-        ctx.moveTo(vx - vx * 1.8 * p, y);
-        ctx.lineTo(vx + vx * 1.8 * p, y);
+        ctx.moveTo(vx - vx * 2 * p, y);
+        ctx.lineTo(vx + vx * 2 * p, y);
         ctx.stroke();
       }
-      for (let j = -8; j <= 8; j++) {
-        ctx.beginPath();
-        ctx.moveTo(vx, vy);
-        ctx.lineTo(vx + j * (canvas.width / 16), canvas.height * 1.2);
-        ctx.stroke();
-      }
-    };
+    }
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      const bg = ctx.createRadialGradient(mx * 0.3 + canvas.width * 0.35, canvas.height * 0.3, 0, canvas.width / 2, canvas.height / 2, canvas.width * 0.9);
-      bg.addColorStop(0, 'rgba(0,20,50,.4)');
-      bg.addColorStop(0.5, 'rgba(2,4,12,.6)');
-      bg.addColorStop(1, 'rgba(2,4,8,.9)');
+      const bg = ctx.createRadialGradient(mx * 0.2 + canvas.width * 0.4, canvas.height * 0.3, 0, canvas.width / 2, canvas.height / 2, canvas.width);
+      bg.addColorStop(0, 'rgba(0,15,35,1)');
+      bg.addColorStop(0.6, 'rgba(1,2,8,1)');
+      bg.addColorStop(1, 'rgba(0,0,0,1)');
       ctx.fillStyle = bg;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      rains.forEach(r => { r.update(); r.draw(); });
       drawGrid();
       particles.forEach(p => { p.update(); p.draw(); });
+
       animationId = requestAnimationFrame(animate);
     };
     animate();
@@ -187,7 +213,7 @@ export default function Home() {
       <canvas id="bgc" ref={canvasRef}></canvas>
 
       <nav>
-        <div className="logo">KOSHUR.CODER</div>
+        <div className="logo glitch-text">KOSHUR.CODER</div>
         <div className="nav-links">
           <a href="#about">ABOUT</a>
           <a href="#skills">SKILLS</a>
@@ -204,7 +230,7 @@ export default function Home() {
           <div className="hero-content">
             <div className="reveal visible" style={{ animationDelay: '0.1s' }}>
               <div className="hero-tag">{data.hero.tag}</div>
-              <h1 className="hero-name">
+              <h1 className="hero-name glitch-text">
                 <span className="gname">{data.hero.name}</span>
                 <span className="gsub">{data.hero.subtitle}</span>
               </h1>
@@ -299,8 +325,8 @@ export default function Home() {
         <div style={{ maxWidth: '1100px', width: '100%' }}>
           <div className="sh reveal"><div className="sn">// 02</div><h2 className="st">TECH STACK</h2><div className="sl"></div></div>
           <div className="sg">
-            {data.skills.map(s => (
-              <div key={s.name} className="sc reveal">
+            {data.skills.map((s, idx) => (
+              <div key={s.name} className={`sc reveal reveal-${(idx % 6) + 1}`}>
                 <span className="si">{s.icon}</span>
                 <div className="sname">{s.name}</div>
                 <div style={{ overflow: 'hidden' }}><div className="sp">{s.percent}%</div></div>
@@ -335,7 +361,7 @@ export default function Home() {
           <div className="sh reveal"><div className="sn">// 04</div><h2 className="st">PROJECTS</h2><div className="sl"></div></div>
           <div className="pg">
             {data.projects.map((p, i) => (
-              <div key={i} className="pc reveal">
+              <div key={i} className={`pc reveal reveal-${(i % 3) + 1}`}>
                 <div className="pty">{p.type}</div>
                 <div className="ptit">{p.title}</div>
                 <div className="pdesc">{p.description}</div>
@@ -429,8 +455,8 @@ export default function Home() {
                   <span style={{ fontFamily: 'Orbitron', fontSize: '13px', letterSpacing: '1px', color: '#fff', fontWeight: '700' }}>haqasrar264@gmail.com</span>
                 </a>
 
-                {data.contact.links.filter(l => l.label !== 'EMAIL').map(l => (
-                  <a key={l.label} href={l.url} target="_blank" className="ci">
+                {data.contact.links.filter(l => l.label !== 'EMAIL').map((l, idx) => (
+                  <a key={l.label} href={l.url} target="_blank" className={`ci reveal reveal-${(idx % 4) + 1}`}>
                     <span style={{ fontSize: '20px' }}>{l.icon}</span>
                     <span style={{ fontFamily: 'Share Tech Mono,monospace', fontSize: '13px', letterSpacing: '1px' }}>{l.label}</span>
                   </a>

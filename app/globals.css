@@ -31,6 +31,21 @@ body {
   font-family: 'Rajdhani', sans-serif;
   overflow-x: hidden;
   cursor: none;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.2) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.04));
+  background-size: 100% 4px, 3px 100%;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.25;
 }
 
 #cur {
@@ -1260,13 +1275,105 @@ footer {
 
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity .7s, transform .7s;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* STAGGERED REVEAL DELAYS */
+.reveal-1 {
+  transition-delay: 0.1s;
+}
+
+.reveal-2 {
+  transition-delay: 0.2s;
+}
+
+.reveal-3 {
+  transition-delay: 0.3s;
+}
+
+.reveal-4 {
+  transition-delay: 0.4s;
+}
+
+.reveal-5 {
+  transition-delay: 0.5s;
+}
+
+.reveal-6 {
+  transition-delay: 0.6s;
+}
+
+/* MAZEDAAR GLITCH EFFECT */
+.glitch-text:hover {
+  text-shadow: 2px 0 #ff00c1, -2px 0 #00fff9;
+  animation: glitch-anim 0.3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* HOLOGRAPHIC CARD */
+.pc,
+.sc,
+.stcard {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.pc:hover,
+.sc:hover,
+.stcard:hover {
+  background: rgba(0, 30, 60, 0.95);
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.2),
+    inset 0 0 15px rgba(0, 245, 255, 0.1);
+  transform: translateY(-8px) scale(1.02) !important;
+}
+
+/* BUTTON PULSE */
+.btn-p:hover {
+  animation: btn-pulse 1.5s infinite;
+}
+
+@keyframes btn-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 245, 255, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 15px rgba(0, 245, 255, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 245, 255, 0);
+  }
 }
 
 @media(max-width:1024px) {
