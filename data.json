@@ -210,11 +210,6 @@
         "icon": "💼"
       },
       {
-        "label": "EMAIL",
-        "url": "mailto:asrar@example.com",
-        "icon": "📧"
-      },
-      {
         "label": "YOUTUBE",
         "url": "https://youtube.com/@haqasrar",
         "icon": "▶️"

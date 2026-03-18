@@ -423,12 +423,24 @@ export default function Home() {
             <div className="contact-info">
               <p className="cd">{data.contact.description}</p>
               <div className="cl">
-                {data.contact.links.map(l => (
+                {/* TOP EMAIL CONTACT */}
+                <a href="mailto:haqasrar264@gmail.com" className="ci" style={{ border: '1px solid #00f5ff', background: 'rgba(0,245,255,0.05)' }}>
+                  <span style={{ fontSize: '20px' }}>📧</span>
+                  <span style={{ fontFamily: 'Orbitron', fontSize: '11px', letterSpacing: '1px', color: '#00f5ff' }}>haqasrar264@gmail.com</span>
+                </a>
+
+                {data.contact.links.filter(l => l.label !== 'EMAIL').map(l => (
                   <a key={l.label} href={l.url} target="_blank" className="ci">
                     <span style={{ fontSize: '20px' }}>{l.icon}</span>
                     <span style={{ fontFamily: 'Share Tech Mono,monospace', fontSize: '13px', letterSpacing: '1px' }}>{l.label}</span>
                   </a>
                 ))}
+
+                {/* BOTTOM EMAIL CONTACT */}
+                <a href="mailto:haqasrar264@gmail.com" className="ci" style={{ opacity: 0.7, fontSize: '10px' }}>
+                  <span style={{ fontSize: '15px' }}>✉</span>
+                  <span style={{ fontFamily: 'Share Tech Mono', letterSpacing: '1px' }}>QUICK_MAIL: haqasrar264@gmail.com</span>
+                </a>
               </div>
               <div className="lr">
                 {data.contact.languages.map(lang => <span key={lang} className="lt">{lang}</span>)}
